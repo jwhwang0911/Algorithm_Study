@@ -1,5 +1,5 @@
 def maxcp(n,m,v,c):
-    dp = [[0 for row in range(m + 1)] for col in range(n + 1)]
+    dp = [[int(0) for row in range(m + 1)] for col in range(n + 1)]
     for i in range(1, n + 1):
         for j in range(1, m + 1):
             if v[i - 1] <= j:
@@ -19,6 +19,7 @@ for i in range(n):
     while r > 1:
         v.append(p*r)
         c.append(q*r)
-        r -= 1
+
+        r = r//2
         n += 1
-print(maxcp(n,m,v,c))
+print(int(maxcp(n,m,v,c)))
