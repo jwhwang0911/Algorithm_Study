@@ -1,0 +1,3 @@
+﻿  bj_2839.cpp
+C:\Users\HWANG SUNG MAN\Desktop\2021_여름학기_알고리즘\Dp\Bj_2839\Bj_2839\bj_2839.cpp(11,4): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+LINK : fatal error LNK1168: C:\Users\HWANG SUNG MAN\Desktop\2021_여름학기_알고리즘\Dp\Bj_2839\Debug\Bj_2839.exe을(를) 쓰기용으로 열 수 없습니다.
