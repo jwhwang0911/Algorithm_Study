@@ -13,6 +13,17 @@ def main():
     a = len(s2)
     b = len(s1)
     print(dp[a][b])
+    while dp[a][b] != 0:
+        if dp[a][b] == dp[a-1][b]:
+            a -= 1
+        elif dp[a][b] == dp[a][b-1]:
+            b -= 1
+        else:
+            s3.insert(0,s1[b-1])
+            a -= 1
+            b -= 1
+    print("".join(s3))
+
 
 if __name__ == "__main__":
     main()
