@@ -10,7 +10,7 @@ def maxprofit(n,k,w,v):
     use = [0 for i in range(n)]
     i = int(n)
     j = int(k)
-    while j != 0:
+    while dp[i][j] != 0:
         if dp[i][j] != dp[i-1][j]:
             use[i-1] = 1
             j = j - w[i-1]
