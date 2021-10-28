@@ -14,9 +14,22 @@ def matrixChain(arr,i,j):
         return _min
 
 
+def dpmcm(li):
+    n = len(li)
+    dp = [[0 for i in range(n)] for j in range(n)]
+    for L in range(2,n):
+        for i in range(1,n-L+1):
+            j = L+i-1
+            dp[i][j] = sys.maxsize
+            for k in range(i,j):
+                dp[i][j] = min(dp[i][j], dp[i][k]+dp[k+1][j]+li[i-1]*li[k]*li[j])
+    return dp[1][n-1]
+    
+
 def main():
     arr = list(map(int,input().split()))
     print(matrixChain(arr,1,len(arr)-1))
+    print(dpmcm(arr))
 
 
 if __name__ == "__main__":
