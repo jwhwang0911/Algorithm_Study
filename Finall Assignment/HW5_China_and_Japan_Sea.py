@@ -1,10 +1,4 @@
-direction = [[-1,0],[1,0],[0,-1],[0,1]]
-
-
-def Resultfunc(height):
-    global direction
-    direction = [[-1,0],[1,0],[0,-1],[0,1]]
-
+def search(height):
     m = len(height)
     n = len(height[0])
     west = 0    # 왼쪽 + 위        0
@@ -33,19 +27,11 @@ def Resultfunc(height):
 
 
 def flowcheck(height,flow,whichsea,m,n,row,col):
+    direction = [[-1, 0], [1, 0], [0, -1], [0, 1]]
     flow[row][col][whichsea] = True
     for dir in direction:
         nr,nc = row+dir[0],col+dir[1]
         if nr < 0 or nr >= m or nc < 0 or nc >= n or flow[nr][nc][whichsea]:
             continue
-        if height[row][col] < height[nr][nc]:
+        if height[row][col] <= height[nr][nc]:
             flowcheck(height,flow,whichsea,m,n,nr,nc)
-
-
-if __name__ == "__main__":
-    height = []
-    m = int(input())
-    for _ in range(m):
-        height.append(list(map(int,input().split(','))))
-
-    print(Resultfunc(height))

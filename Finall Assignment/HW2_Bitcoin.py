@@ -1,5 +1,4 @@
-if __name__ == "__main__":
-    cost = list(map(int,input().split(" ")))
+def max_profit(cost):
     n = len(cost)
     i = profit = 0
     buy = sel = i
@@ -16,4 +15,4 @@ if __name__ == "__main__":
                         break
             profit = profit + cost[sel]-cost[buy]
             buy = i = sel + 1
-    print(profit)
+    return profit
