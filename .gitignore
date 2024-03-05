@@ -1,0 +1,14 @@
+*/build
+*.vcxproj
+*.vcxproj.filters
+*.cmake
+*.yaml
+*.exe
+*.json
+Makefile
+*.sln
+*.check_cache
+*.bin
+Makefile2
+*/Makefile2
+

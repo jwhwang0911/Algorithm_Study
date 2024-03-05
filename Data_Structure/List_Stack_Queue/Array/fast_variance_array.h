@@ -9,7 +9,7 @@
 #include<type_traits>
 
 template<typename ... Args> // ... = 템플릿 파라미터 팩; 0개 이상의 템플릿 인자들을 나타냄
-auto build_array(Args&& ...args) -> std::array<typename std::common_type<Args...>::type, sizeof...(args)> // -> 뒷부분은 반환 타입을 정의해주는거임 (python처럼)
+auto build_array(Args&&  ...args) -> std::array<typename std::common_type<Args...>::type, sizeof...(args)> // -> 뒷부분은 반환 타입을 정의해주는거임 (python처럼)
 {// common_type은 Args의 공통타입을 설정해주는거임
 // sizeof...(a) 는 a의 개수를 return (예를 들어 a = {1,2,3,6}이면 4를 리턴함)
     using commonType = typename std::common_type<Args...>::type;
