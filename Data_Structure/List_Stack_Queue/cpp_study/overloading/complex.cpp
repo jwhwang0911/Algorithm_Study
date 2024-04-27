@@ -121,8 +121,3 @@ Complex& Complex::operator=(const Complex& c) {
   img = c.img;
   return *this;
 }
-
-Complex operator+(const Complex& a, const Complex& b) {
-  Complex temp(a.real + b.real, a.img + b.img);
-  return temp;
-}
