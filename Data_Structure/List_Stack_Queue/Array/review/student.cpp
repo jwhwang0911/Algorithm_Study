@@ -1,9 +1,9 @@
-#include "dynamic_array.h"
-#include <string.h>
-
-
 #include "student.h"
+#include "dynamic_array.h"
 
+std::ostream& operator<< (std::ostream &os, const Student &s) {
+    return (os << "[" << s.name <<  ", " << s.standard << "]");
+}
 
 int main() {
     int nStudents;
